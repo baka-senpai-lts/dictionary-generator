@@ -6,38 +6,41 @@
  */
 
 #include <iostream>
+#include <vector>
 
 // Pls, don't beat me :3
 using namespace std;
 
-struct input_data{
-    string name;
-    string age;
-    string birth;
-    string pet;
-};
-
 // This function separates passwords with \n
 
-string generate(input_data data){
-    
-    string result;
+string generate(vector <string> data)
+{
 
-    return result;
+	string result;
+
+	return result;
 
 }
 
-int main(int argc, char* argv[]){
-    
-    input_data data;
+int main(int argc, char* argv[])
+{
 
-    cin >> data.name;
-    cin >> data.age;
-    cin >> data.birth;
-    cin >> data.pet;
+	vector <string> data;
 
-    cout << generate(data) << endl;
-    
-    return 0;
+	string buf;
+
+	do
+	{
+
+		getline(cin, buf);
+
+		data.push_back(buf);
+
+	}
+	while (buf != "");
+
+	cout << generate(data) << endl;
+
+	return 0;
 
 }
